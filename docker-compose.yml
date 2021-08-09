@@ -1,0 +1,75 @@
+version: "3.0"
+
+services: 
+  redis-7000:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PORT=7000
+    environment:
+      - PORT=7000
+    volumes:
+      - "./7000/data:/data"
+      - "./7000/config:/etc/redis"
+    network_mode: "host"
+  redis-7001:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - port=7001
+    environment:
+      - PORT=7001
+    volumes:
+      - "./7001/data:/data"
+      - "./7001/config:/etc/redis"
+    network_mode: "host"
+  redis-7002:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - port=7002
+    environment:
+      - PORT=7002
+    volumes:
+      - "./7002/data:/data"
+      - "./7002/config:/etc/redis"
+    network_mode: "host"
+  redis-7003:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - port=7003
+    environment:
+      - PORT=7003
+    volumes:
+      - "./7003/data:/data"
+      - "./7003/config:/etc/redis"
+    network_mode: "host"
+  redis-7004:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - port=7004
+    environment:
+      - PORT=7004
+    volumes:
+      - "./7004/data:/data"
+      - "./7004/config:/etc/redis"
+    network_mode: "host"
+  redis-7005:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - port=7005
+    environment:
+      - PORT=7005
+    volumes:
+      - "./7005/data:/data"
+      - "./7005/config:/etc/redis"
+    network_mode: "host"
